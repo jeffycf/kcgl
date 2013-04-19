@@ -377,6 +377,7 @@ class myApp(QtGui.QWidget):
         sql=u'''
            select prodctuno as 编号,time as 时间,prodtype as 良否,qty as 数量,\
            place as 库位,recordman as 记录人, mark as 备注 from record
+           order by 时间
         '''
         model.setQuery(sql)
         self.ui.tableView_2.setModel(model)
