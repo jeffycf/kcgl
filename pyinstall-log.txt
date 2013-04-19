@@ -1,0 +1,17 @@
+Downloading/unpacking myapp.py
+  Getting page http://pypi.python.org/simple/myapp.py
+  Could not fetch URL http://pypi.python.org/simple/myapp.py: HTTP Error 404: Not Found (myapp.py does not have any releases)
+  Will skip URL http://pypi.python.org/simple/myapp.py when looking for download links for myapp.py
+  Getting page http://pypi.python.org/simple/
+  URLs to search for versions for myapp.py:
+  Could not find any downloads that satisfy the requirement myapp.py
+No distributions at all found for myapp.py
+Exception information:
+Traceback (most recent call last):
+  File "C:\Python27\Scripts\pyinstall.py", line 305, in main
+    requirement_set.install_files(finder)
+  File "C:\Python27\Scripts\pyinstall.py", line 1099, in install_files
+    url = finder.find_requirement(req_to_install, upgrade=self.upgrade)
+  File "C:\Python27\Scripts\pyinstall.py", line 425, in find_requirement
+    raise DistributionNotFound('No distributions at all found for %s' % req)
+DistributionNotFound: No distributions at all found for myapp.py
