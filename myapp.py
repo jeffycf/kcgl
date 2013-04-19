@@ -242,10 +242,11 @@ class myApp(QtGui.QWidget):
     def delproduct(self):
         if self.ui.lineEdit_9.text()=='':
             QMessageBox.information(self,'Waring',u'请输入编号和名称')
+            return
         else:
             sqlstr=[self.ui.lineEdit_9.text()]
             name=dbconn.getpronamebyno(self.ui.lineEdit_9.text())
-            if dbconn.deldataproduct(sqlstr,)==0:
+            if dbconn.deldataproduct(sqlstr)==0:
                 self.ui.textEdit.append(u"编号:"+sqlstr[0]+u".......名称:"+name+u"...........数据删除失败，请检查编号和名称是否正确!!!")
             else:
                 self.ui.textEdit.append(u"编号:"+sqlstr[0]+u".......名称:"+name+u"...........数据删除成功！！")
